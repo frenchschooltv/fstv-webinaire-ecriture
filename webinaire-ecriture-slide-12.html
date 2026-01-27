@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 8 - Erreur #5 Registre</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+
+        /* Subtle organic shape - top right corner */
+        .blob-corner {
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            z-index: 0;
+            opacity: 0.35;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="blob-corner pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.7,-72.6C56.3,-65.8,69.1,-57.4,78.9,-46.3C88.7,-35.2,95.5,-21.4,94.2,-8.1C92.9,5.2,83.5,18,74.1,29.9C64.8,41.8,55.5,52.8,44.7,61.4C33.8,70,21.4,76.2,8.4,78C-4.6,79.9,-18.3,77.3,-30.9,72C-43.5,66.6,-55.1,58.5,-64.8,48.2C-74.5,37.9,-82.3,25.4,-84.6,12.1C-86.8,-1.2,-83.5,-15.3,-75.8,-27.1C-68,-38.9,-55.8,-48.3,-43.6,-55.6C-31.4,-62.9,-19.2,-68,-6.4,-66.9C6.4,-65.8,12.8,-58.5,19.2,-51.2Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 w-full h-full flex flex-col px-20 py-16">
+<!-- Header Section -->
+<div class="mb-10 w-full">
+<div class="flex items-center mb-3">
+<div class="px-4 py-1 rounded-lg text-white font-poppins font-bold text-sm uppercase tracking-widest mr-4 shadow-sm" style="background-color: #1A1F3D;">
+                        Erreur #5
+                    </div>
+<div class="flex-grow rounded-full" style="height: 2px; background-color: #E2E8F0;"></div>
+</div>
+<h1 class="font-montserrat font-extrabold text-5xl mb-2" style="color: #1A1F3D;">
+                    Mauvais registre
+                </h1>
+<p class="font-poppins text-xl font-medium" style="color: #5A657A;">
+                    Adapter son ton au destinataire est crucial
+                </p>
+</div>
+<!-- Cards Section (Dominant Part) -->
+<div class="flex-1 w-full max-w-6xl mx-auto flex flex-col justify-center">
+<div class="grid grid-cols-3 gap-8 h-full pb-4">
+<!-- Card 1: Familier -->
+<div class="bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden group transition-colors duration-300" style="border: 1px solid #E2E8F0;">
+<div class="h-2 w-full" style="background-color: #CBD5E0;"></div>
+<div class="p-8 flex-1 flex flex-col">
+<!-- Icon & Title -->
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: #F7FAFC; color: #718096;">
+<i class="fa-solid fa-comments text-xl"></i>
+</div>
+<div>
+<h3 class="font-montserrat font-bold text-xl" style="color: #1A1F3D;">Familier</h3>
+<p class="font-poppins text-sm" style="color: #718096;">SMS, amis proches</p>
+</div>
+</div>
+<!-- Example Box -->
+<div class="flex-1 rounded-xl p-6 relative flex items-center justify-center" style="background-color: #F7FAFC; border: 1px dashed #CBD5E0;">
+<i class="fa-solid fa-quote-left absolute top-4 left-4 text-xl" style="color: #CBD5E0;"></i>
+<p class="font-poppins text-lg italic text-center leading-relaxed" style="color: #4A5568;">
+                                « Salut ! Ça va ? T'es dispo demain ? »
+                            </p>
+</div>
+</div>
+</div>
+<!-- Card 2: Standard -->
+<div class="bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden group transform hover:-translate-y-2 transition-all duration-300 relative z-10" style="border: 1px solid #E2E8F0;">
+<div class="h-2 w-full" style="background-color: #B8B5E8;"></div>
+<!-- Badge for emphasis -->
+<div class="absolute top-4 right-4 text-xs font-bold px-2 py-1 rounded" style="background-color: #E6FFFA; color: #10B981; border: 1px solid #10B981;">
+                            Recommandé
+                        </div>
+<div class="p-8 flex-1 flex flex-col">
+<!-- Icon & Title -->
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: #F4F4F9; color: #1A1F3D;">
+<i class="fa-solid fa-envelope text-xl"></i>
+</div>
+<div>
+<h3 class="font-montserrat font-bold text-xl" style="color: #1A1F3D;">Standard</h3>
+<p class="font-poppins text-sm" style="color: #718096;">Emails pro, DELF B2</p>
+</div>
+</div>
+<!-- Example Box -->
+<div class="flex-1 rounded-xl p-6 relative flex items-center justify-center" style="background-color: #F8F9FC; border: 1px solid #E2E8F0;">
+<i class="fa-solid fa-quote-left absolute top-4 left-4 text-xl" style="color: #B8B5E8;"></i>
+<p class="font-poppins text-lg font-medium text-center leading-relaxed" style="color: #1A1F3D;">
+                                « Bonjour, j'espère que vous allez bien. Seriez-vous disponible demain ? »
+                            </p>
+</div>
+</div>
+</div>
+<!-- Card 3: Formel -->
+<div class="bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden group transition-colors duration-300" style="border: 1px solid #E2E8F0;">
+<div class="h-2 w-full" style="background-color: #1A1F3D;"></div>
+<div class="p-8 flex-1 flex flex-col">
+<!-- Icon & Title -->
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: #EDF2F7; color: #2D3748;">
+<i class="fa-solid fa-file-signature text-xl"></i>
+</div>
+<div>
+<h3 class="font-montserrat font-bold text-xl" style="color: #1A1F3D;">Formel</h3>
+<p class="font-poppins text-sm" style="color: #718096;">Lettres, DALF C1</p>
+</div>
+</div>
+<!-- Example Box -->
+<div class="flex-1 rounded-xl p-6 relative flex items-center justify-center" style="background-color: #F7FAFC; border: 1px dashed #CBD5E0;">
+<i class="fa-solid fa-quote-left absolute top-4 left-4 text-xl" style="color: #CBD5E0;"></i>
+<p class="font-poppins text-lg italic text-center leading-relaxed text-sm" style="color: #4A5568;">
+                                « Madame, Monsieur, je me permets de vous écrire afin de solliciter votre disponibilité. »
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

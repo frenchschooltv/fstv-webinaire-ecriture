@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Exemple Erreur #4 - Pavé vs Aéré (Avec Header Email)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        /* Blob - Top Left - Fixed Color #B8B5E8 - Opacity 0.12 */
+        .blob-accent {
+            position: absolute;
+            top: -150px;
+            left: -100px;
+            width: 600px;
+            height: 600px;
+            z-index: 0;
+            opacity: 0.12;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+    
+    <div class="blob-accent pointer-events-none">
+        <svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42.7,-72.6C56.3,-65.8,69.1,-57.4,78.9,-46.3C88.7,-35.2,95.5,-21.4,94.2,-8.1C92.9,5.2,83.5,18,74.1,29.9C64.8,41.8,55.5,52.8,44.7,61.4C33.8,70,21.4,76.2,8.4,78C-4.6,79.9,-18.3,77.3,-30.9,72C-43.5,66.6,-55.1,58.5,-64.8,48.2C-74.5,37.9,-82.3,25.4,-84.6,12.1C-86.8,-1.2,-83.5,-15.3,-75.8,-27.1C-68,-38.9,-55.8,-48.3,-43.6,-55.6C-31.4,-62.9,-19.2,-68,-6.4,-66.9C6.4,-65.8,12.8,-58.5,19.2,-51.2Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+        </svg>
+    </div>
+
+    <div class="relative z-10 w-full h-full flex flex-col px-20 py-16">
+        
+        <div class="mb-8 w-full">
+            <div class="flex items-center mb-3">
+                <div class="px-4 py-1 rounded-lg text-white font-poppins font-bold text-sm uppercase tracking-widest mr-4 shadow-sm" style="background-color: #1A1F3D;">
+                    Exemple
+                </div>
+                <div class="flex-grow rounded-full" style="height: 2px; background-color: #E2E8F0;"></div>
+            </div>
+            <h1 class="font-montserrat font-extrabold text-4xl mb-2" style="color: #1A1F3D;">
+                Avant / <span style="color: #10B981;">Après</span>
+            </h1>
+        </div>
+
+        <div class="flex-1 grid grid-cols-2 gap-8 mb-6">
+            
+            <div class="rounded-2xl shadow-lg relative overflow-hidden flex flex-col h-full" style="background-color: #FEF2F2; border: 2px solid #FECACA;">
+                
+                <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: radial-gradient(#FCA5A5 1px, transparent 1px); background-size: 20px 20px;"></div>
+                
+                <div class="absolute top-4 right-4 opacity-20" style="color: #FCA5A5;">
+                    <i class="fa-solid fa-quote-right text-6xl"></i>
+                </div>
+
+                <div class="relative z-20 flex justify-center pt-6 mb-2">
+                    <div class="px-4 py-1 rounded-full shadow-sm flex items-center bg-white border border-red-200">
+                        <span class="font-montserrat font-bold text-sm text-red-600">❌ Pavé illisible</span>
+                    </div>
+                </div>
+
+                <div class="p-8 relative z-10 flex-1 flex flex-col">
+                    <div class="pb-3 mb-4 flex items-center opacity-80" style="border-bottom: 1px solid #FCA5A5;">
+                        <div class="font-poppins text-sm font-semibold mr-3" style="color: #7F1D1D;">Sujet :</div>
+                        <div class="font-poppins text-sm italic" style="color: #4A5568;">Point avancement projet</div>
+                    </div>
+                    
+                    <p class="font-poppins text-sm text-gray-600 text-justify leading-tight flex-1" style="line-height: 1.3;">
+                        "Bonjour, je vous écris pour vous informer que le projet avance bien. Nous avons terminé la phase 1 et nous commençons la phase 2 lundi prochain. Cependant, il y a un problème avec le budget. Nous avons dépassé de 10% à cause des coûts imprévus. Je propose qu'on en parle vendredi pour trouver une solution. Merci de me confirmer votre disponibilité."
+                    </p>
+                </div>
+            </div>
+
+            <div class="rounded-2xl shadow-lg relative overflow-hidden flex flex-col h-full" style="background-color: #ECFDF5; border: 2px solid #A7F3D0;">
+                
+                <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: radial-gradient(#6EE7B7 1px, transparent 1px); background-size: 20px 20px;"></div>
+                
+                <div class="absolute top-4 right-4 opacity-20" style="color: #6EE7B7;">
+                    <i class="fa-solid fa-quote-right text-6xl"></i>
+                </div>
+
+                <div class="relative z-20 flex justify-center pt-6 mb-2">
+                    <div class="px-4 py-1 rounded-full shadow-sm flex items-center bg-white border border-green-200">
+                        <span class="font-montserrat font-bold text-sm text-emerald-600">✅ Texte aéré</span>
+                    </div>
+                </div>
+
+                <div class="p-8 relative z-10 flex-1 flex flex-col">
+                    <div class="pb-3 mb-4 flex items-center opacity-80" style="border-bottom: 1px solid #6EE7B7;">
+                        <div class="font-poppins text-sm font-semibold mr-3" style="color: #065F46;">Sujet :</div>
+                        <div class="font-poppins text-sm italic" style="color: #4A5568;">Point avancement projet</div>
+                    </div>
+
+                    <div class="font-poppins text-sm text-gray-700 leading-relaxed space-y-3 w-full flex-1">
+                        <p>Bonjour,</p>
+                        <p>Je vous écris pour vous informer que le projet avance bien. Nous avons terminé la phase 1 et nous commençons la phase 2 lundi prochain.</p>
+                        <p>Cependant, il y a un problème avec le budget. Nous avons dépassé de 10% à cause des coûts imprévus.</p>
+                        <p>Je propose qu'on en parle vendredi pour trouver une solution. Merci de me confirmer votre disponibilité.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-l-4 rounded-r-xl p-6 flex items-center shadow-sm relative z-20 bg-white" style="border-color: #B8B5E8;">
+            <div class="mr-6 flex-shrink-0">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #F4F4F9;">
+                    <i class="fa-solid fa-mobile-screen text-2xl" style="color: #B8B5E8;"></i>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-1" style="color: #1A1F3D;">Test du smartphone</h4>
+                <p class="font-poppins text-base leading-relaxed" style="color: #4A5568;">
+                    Relisez votre texte sur mobile. <span class="font-bold" style="color: #1A1F3D;">Si c'est illisible, c'est que vous devez aérer.</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

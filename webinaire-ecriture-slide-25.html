@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 20 - Merci d'avoir participé</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        /* Subtle organic shape - centered but offset */
+        .blob-corner { 
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            z-index: 0;
+            opacity: 0.35; /* Increased opacity to 0.35 as requested */
+            transform: rotate(120deg);
+        }
+        
+        .blob-bottom {
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            z-index: 0;
+            opacity: 0.35; /* Increased opacity to 0.35 as requested */
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+<!-- Decorative Background Elements -->
+<div class="blob-corner pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.7,-76.3C58.9,-69.3,69.1,-55.8,76.9,-42.1C84.7,-28.4,90.1,-14.2,88.7,-0.8C87.3,12.6,79.1,25.2,69.5,36.4C59.9,47.6,48.9,57.4,36.8,64.2C24.7,71,11.5,74.8,-1.2,76.9C-13.9,79,-26.8,79.4,-38.2,74.3C-49.6,69.2,-59.5,58.6,-67.2,47.1C-74.9,35.6,-80.4,23.2,-81.4,10.5C-82.4,-2.2,-78.9,-15.1,-72.1,-26.4C-65.3,-37.7,-55.2,-47.4,-43.7,-55.3C-32.2,-63.2,-19.3,-69.3,-5.7,-68.3C7.9,-67.3,21.8,-59.2,32.5,-83.3Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<div class="blob-bottom pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M38.1,-63.3C48.6,-55.1,56.3,-43.1,63.1,-30.7C69.9,-18.3,75.8,-5.5,74.1,6.5C72.4,18.5,63.1,29.7,53.2,39.3C43.3,48.9,32.8,56.9,21.1,61.4C9.4,65.9,-3.5,66.9,-15.4,63.3C-27.3,59.7,-38.2,51.5,-47.2,41.4C-56.2,31.3,-63.3,19.3,-65.1,6.4C-66.9,-6.5,-63.4,-20.3,-55.4,-31.4C-47.4,-42.5,-34.9,-50.9,-22.4,-57.5C-9.9,-64.1,2.6,-68.9,13.1,-69.6C23.6,-70.3,38.1,-71.5,38.1,-63.3Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<!-- Main Content Container (Flex Centered) -->
+<div class="relative z-10 w-full h-full flex flex-col items-center justify-center px-20">
+<!-- Icon/Symbol -->
+<div class="mb-8 animate-bounce" style="animation-duration: 3s;">
+<div class="w-20 h-20 rounded-full flex items-center justify-center shadow-sm" style="background-color: #F4F4F9; border: 1px solid #E2E8F0;">
+<i class="fa-solid fa-gift text-4xl" style="color: #1A1F3D;"></i>
+</div>
+</div>
+<!-- Main Title -->
+<h1 class="font-montserrat font-extrabold text-6xl mb-8 tracking-tight text-center leading-tight" style="color: #1A1F3D;">
+                Merci d'avoir participé !
+            </h1>
+<!-- Decorative Divider -->
+<div class="w-24 h-1.5 rounded-full mb-10" style="background-color: #B8B5E8;"></div>
+<!-- Content Container -->
+<div class="space-y-6 text-center max-w-5xl w-full flex flex-col items-center">
+<!-- Bonus Item -->
+<div class="backdrop-blur-sm p-5 rounded-xl border border-transparent transition-colors duration-300 w-full max-w-3xl" style="background-color: rgba(255, 255, 255, 0.5);">
+<p class="font-poppins text-2xl font-medium leading-relaxed flex items-center justify-center" style="color: #4A5568;">
+<span class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shrink-0" style="background-color: rgba(226, 232, 240, 0.3);">
+<i class="fa-solid fa-file-pdf text-xl" style="color: #B8B5E8;"></i>
+</span>
+<span>
+                            Bonus PDF : <span class="font-bold" style="color: #1A1F3D;">15 connecteurs logiques</span>
+</span>
+</p>
+</div>
+<!-- Offer Item -->
+<div class="backdrop-blur-sm p-5 rounded-xl border border-transparent transition-colors duration-300 w-full max-w-3xl" style="background-color: rgba(255, 255, 255, 0.5);">
+<p class="font-poppins text-2xl font-medium leading-relaxed flex items-center justify-center" style="color: #4A5568;">
+<span class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shrink-0" style="background-color: rgba(226, 232, 240, 0.3);">
+<i class="fa-solid fa-clock text-xl" style="color: #B8B5E8;"></i>
+</span>
+<span>
+                            Atelier à <span class="font-bold" style="color: #1A1F3D;">99€</span> : 48h pour profiter de l'offre
+                        </span>
+</p>
+</div>
+<!-- Link Action -->
+<div class="pt-6">
+<div class="font-poppins px-8 py-3 rounded-full flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow" style="color: #1A1F3D; background-color: #F4F4F9; border: 1px solid rgba(184, 181, 232, 0.3);">
+<i class="fa-solid fa-arrow-right" style="color: #B8B5E8;"></i>
+<span class="font-semibold text-lg tracking-wide">https://frenchschooltv.com/products/atelier-ecriture</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 16 - Témoignages</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        /* Subtle organic shape - bottom right corner */
+        .blob-corner { 
+            position: absolute;
+            bottom: -150px;
+            right: -50px;
+            width: 500px;
+            height: 500px;
+            z-index: 0;
+            opacity: 0.35; /* Increased opacity as requested */
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="blob-corner pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,70.6,31.2C59,40.9,47.1,47.4,35.7,54.7C24.3,62,13.4,70.1,1.4,67.7C-10.6,65.3,-23.7,52.4,-36.3,41.9C-48.9,31.4,-61,23.3,-68.9,11.8C-76.8,0.3,-80.5,-14.6,-74.6,-26.4C-68.7,-38.2,-53.2,-46.9,-39.7,-54.3C-26.2,-61.7,-14.7,-67.8,0.6,-68.9C15.9,-70,30.5,-66.1,44.7,-76.4Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 w-full h-full flex flex-col px-20 py-16">
+<!-- Header Section -->
+<div class="mb-10 w-full">
+<div class="flex items-center mb-3">
+<div class="px-4 py-1 rounded-lg text-white font-poppins font-bold text-sm uppercase tracking-widest mr-4 shadow-sm" style="background-color: #1A1F3D;">
+                        Vos avis
+                    </div>
+<div class="flex-grow rounded-full" style="height: 2px; background-color: #E2E8F0;"></div>
+</div>
+<h1 class="font-montserrat font-extrabold text-5xl mb-2" style="color: #1A1F3D;">
+                    Ce que nos élèves en pensent
+                </h1>
+<p class="font-poppins text-xl font-medium" style="color: #5A657A;">
+                    Retours d'expérience des participants précédents
+                </p>
+</div>
+<!-- Testimonials Grid (Dominant Part) -->
+<div class="flex-1 w-full max-w-6xl mx-auto flex flex-col justify-center">
+<div class="grid grid-cols-3 gap-8 h-full pb-4">
+<!-- Card 1: Lourdes -->
+<div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300" style="border: 1px solid #E2E8F0;">
+<!-- Quote Icon -->
+<div class="absolute -top-5 left-8 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md" style="background-color: #B8B5E8;">
+<i class="fa-solid fa-quote-left"></i>
+</div>
+<!-- Content -->
+<div class="mt-4 flex-1 flex flex-col justify-between">
+<p class="font-poppins text-lg italic leading-relaxed mb-6" style="color: #4A5568;">
+                            « Je vous remercie parce que j'ai vraiment amélioré ma production écrite. »
+                        </p>
+<!-- Author Info -->
+<div class="flex items-center pt-4" style="border-top: 1px solid #F1F5F9;">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-3" style="background-color: #F3F4F6; color: #1A1F3D;">
+                                L
+                            </div>
+<div>
+<h4 class="font-montserrat font-bold text-base" style="color: #1A1F3D;">Lourdes</h4>
+<p class="font-poppins text-xs uppercase tracking-wide" style="color: #718096;">Espagne</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Janice -->
+<div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300 z-10" style="border: 1px solid #B8B5E8;">
+<!-- Quote Icon -->
+<div class="absolute -top-5 left-8 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md" style="background-color: #1A1F3D;">
+<i class="fa-solid fa-quote-left"></i>
+</div>
+<!-- Content -->
+<div class="mt-4 flex-1 flex flex-col justify-between">
+<p class="font-poppins text-lg font-medium italic leading-relaxed mb-6" style="color: #1A1F3D;">
+                            « Je crois que ce cours en particulier m'a énormément aidé. Il y a une quantité énorme de matériel précieux qui nous est donné. »
+                        </p>
+<!-- Author Info -->
+<div class="flex items-center pt-4" style="border-top: 1px solid #E2E8F0;">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-3" style="background-color: #E2E8F0; color: #1A1F3D;">
+                                J
+                            </div>
+<div>
+<h4 class="font-montserrat font-bold text-base" style="color: #1A1F3D;">Janice</h4>
+<p class="font-poppins text-xs uppercase tracking-wide" style="color: #5A657A;">États-Unis</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Erlend -->
+<div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300" style="border: 1px solid #E2E8F0;">
+<!-- Quote Icon -->
+<div class="absolute -top-5 left-8 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md" style="background-color: #B8B5E8;">
+<i class="fa-solid fa-quote-left"></i>
+</div>
+<!-- Content -->
+<div class="mt-4 flex-1 flex flex-col justify-between">
+<p class="font-poppins text-lg italic leading-relaxed mb-6" style="color: #4A5568;">
+                            « Je suis beaucoup de sites et de personnes, et, sans aucun doute, votre méthode et votre contenu sont absolument géniaux. »
+                        </p>
+<!-- Author Info -->
+<div class="flex items-center pt-4" style="border-top: 1px solid #F1F5F9;">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-3" style="background-color: #F3F4F6; color: #1A1F3D;">
+                                E
+                            </div>
+<div>
+<h4 class="font-montserrat font-bold text-base" style="color: #1A1F3D;">Erlend</h4>
+<p class="font-poppins text-xs uppercase tracking-wide" style="color: #718096;">Norvège</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

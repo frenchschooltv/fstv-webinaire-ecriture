@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 13 - Atelier d'écriture</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+
+        /* Subtle organic shape */
+        .blob-accent {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            z-index: 0;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="blob-accent pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.7,-72.6C56.3,-65.8,69.1,-57.4,78.9,-46.3C88.7,-35.2,95.5,-21.4,94.2,-8.1C92.9,5.2,83.5,18,74.1,29.9C64.8,41.8,55.5,52.8,44.7,61.4C33.8,70,21.4,76.2,8.4,78C-4.6,79.9,-18.3,77.3,-30.9,72C-43.5,66.6,-55.1,58.5,-64.8,48.2C-74.5,37.9,-82.3,25.4,-84.6,12.1C-86.8,-1.2,-83.5,-15.3,-75.8,-27.1C-68,-38.9,-55.8,-48.3,-43.6,-55.6C-31.4,-62.9,-19.2,-68,-6.4,-66.9C6.4,-65.8,12.8,-58.5,19.2,-51.2Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 flex h-full px-16 py-12">
+<!-- Left: Image Section -->
+<div class="flex-shrink-0 flex items-center justify-center pr-12" style="width: 40%;">
+<img src="Atelier-Longer-Name.png" alt="Atelier d'écriture" class="rounded-2xl shadow-xl max-h-full object-contain" style="max-width: 100%;"/>
+</div>
+<!-- Right: Content Section -->
+<div class="flex flex-col justify-center" style="width: 60%;">
+<!-- Header Section -->
+<div class="mb-4">
+<div class="flex items-center mb-8">
+<div class="w-10 h-1 rounded-full mr-4" style="background-color: #1A1F3D;"></div>
+<p class="font-poppins font-semibold tracking-widest uppercase text-sm" style="color: #B8B5E8;">Atelier d'écriture</p>
+</div>
+<h1 class="font-montserrat font-bold text-3xl leading-tight" style="color: #1A1F3D;">
+                    Structurer, connecter <br/>
+                    et <span style="color: #5A657A;">convaincre</span>
+</h1>
+</div>
+<!-- Main List Content -->
+<div class="flex flex-col space-y-3">
+<!-- Item 1 -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mt-1 mr-5 shadow-sm" style="background-color: #E6FFFA;">
+<i class="fa-solid fa-calendar-days text-lg" style="color: #10B981;"></i>
+</div>
+<p class="font-poppins text-xl font-medium leading-relaxed pt-1" style="color: #2D3748;">
+<span class="font-bold" style="color: #1A1F3D;">5 semaines</span> de formation intensive
+                </p>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mt-1 mr-5 shadow-sm" style="background-color: #E6FFFA;">
+<i class="fa-solid fa-video text-lg" style="color: #10B981;"></i>
+</div>
+<p class="font-poppins text-xl font-medium leading-relaxed pt-1" style="color: #2D3748;">
+<span class="font-bold" style="color: #1A1F3D;">1 session live</span> par semaine (avec replay)
+                </p>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mt-1 mr-5 shadow-sm" style="background-color: #E6FFFA;">
+<i class="fa-solid fa-laptop-file text-lg" style="color: #10B981;"></i>
+</div>
+<p class="font-poppins text-xl font-medium leading-relaxed pt-1" style="color: #2D3748;">
+                    Accès complet au <span class="font-bold" style="color: #1A1F3D;">matériel sur plateforme privée</span>
+</p>
+</div>
+<!-- Item 4 -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mt-1 mr-5 shadow-sm" style="background-color: #E6FFFA;">
+<i class="fa-solid fa-pen-to-square text-lg" style="color: #10B981;"></i>
+</div>
+<p class="font-poppins text-xl font-medium leading-relaxed pt-1" style="color: #2D3748;">
+<span class="font-bold" style="color: #1A1F3D;">2 corrections personnalisées</span> détaillées de vos écrits
+                </p>
+</div>
+</div>
+<!-- Bottom Emphasis Box -->
+<div class="mt-6 border-l-4 rounded-r-xl p-4 shadow-sm flex items-start" style="background-color: #F8F9FC; border-color: #B8B5E8;">
+<div class="mr-4 mt-1" style="color: #1A1F3D;">
+<i class="fa-solid fa-star text-xl"></i>
+</div>
+<div>
+<p class="font-poppins text-base leading-relaxed" style="color: #4A5568;">
+<span class="font-bold" style="color: #1A1F3D;">L'objectif :</span> Un accompagnement hybride qui combine autonomie sur la plateforme et interactions en direct pour des progrès rapides.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

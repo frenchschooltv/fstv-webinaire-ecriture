@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 3 - Qui je suis</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+
+        /* Subtle organic shape - bottom right */
+        .blob-accent {
+            position: absolute;
+            bottom: -150px;
+            right: -50px;
+            width: 600px;
+            height: 600px;
+            z-index: 0;
+            opacity: 0.35;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="blob-accent pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,70.6,31.2C59,40.9,47.1,47.4,35.7,54.7C24.3,62,13.4,70.1,1.4,67.7C-10.6,65.3,-23.7,52.4,-36.3,41.9C-48.9,31.4,-61,23.3,-68.9,11.8C-76.8,0.3,-80.5,-14.6,-74.6,-26.4C-68.7,-38.2,-53.2,-46.9,-39.7,-54.3C-26.2,-61.7,-14.7,-67.8,0.6,-68.9C15.9,-70,30.5,-66.1,44.7,-76.4Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 w-full h-full flex px-20 py-16">
+<!-- Left Column: Image & Stats (35%) -->
+<div class="flex flex-col items-center justify-center" style="width: 35%;">
+<!-- Profile Image -->
+<div class="w-64 h-64 rounded-2xl shadow-lg mb-8 relative overflow-hidden">
+<img src="bio-vincent.png" alt="Vincent Bouen" class="w-full h-full object-cover" style="object-position: 60% center;"/>
+<div class="absolute bottom-0 w-full py-2 text-center" style="background-color: #1A1F3D;">
+<p class="font-poppins font-bold text-white tracking-widest uppercase text-sm">Vincent Bouen</p>
+</div>
+</div>
+<!-- Stats Card -->
+<div class="w-72 bg-white rounded-xl p-6 shadow-sm text-center relative" style="border: 1px solid #E2E8F0;">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-sm" style="background-color: #B8B5E8; color: #1A1F3D;">
+                        Communauté
+                    </div>
+<div class="flex justify-center space-x-4 mb-3" style="color: #1A1F3D;">
+<i class="fa-brands fa-youtube text-2xl"></i>
+<i class="fa-brands fa-instagram text-2xl"></i>
+<i class="fa-brands fa-tiktok text-2xl"></i>
+</div>
+<p class="font-montserrat font-extrabold text-3xl mb-1" style="color: #1A1F3D;">3.5 M+</p>
+<p class="font-poppins text-sm" style="color: #718096;">personnes me suivent</p>
+</div>
+</div>
+<!-- Right Column: Text Content (65%) -->
+<div class="flex flex-col justify-center pl-16 pr-4" style="width: 65%;">
+<!-- Header -->
+<div class="mb-8">
+<div class="flex items-center mb-2">
+<div class="w-8 h-1 rounded-full mr-3" style="background-color: #B8B5E8;"></div>
+<p class="font-poppins font-semibold uppercase text-sm tracking-widest" style="color: #B8B5E8;">BIO</p>
+</div>
+<h1 class="font-montserrat font-bold text-5xl" style="color: #1A1F3D;">
+                        Qui suis-je ?
+                    </h1>
+</div>
+<!-- Bio Text -->
+<div class="space-y-6 font-poppins text-lg leading-relaxed" style="color: #4A5568;">
+<p>
+                        Je m'appelle <span class="font-bold" style="color: #1A1F3D;">Vincent</span>, et j'ai créé <span class="font-semibold" style="color: #1A1F3D;">French School TV</span> en 2019.
+                    </p>
+<p>
+                        Depuis, j'ai formé des milliers d'étudiants à travers le monde. Au fil des années, j'ai remarqué un problème récurrent chez beaucoup d'apprenants, même avancés.
+                    </p>
+</div>
+<!-- Quote Box (The Problem) -->
+<div class="my-8 relative pl-6 border-l-4" style="border-color: #1A1F3D;">
+<i class="fa-solid fa-quote-left absolute -top-2 -left-3 bg-white p-1 text-xl" style="color: #B8B5E8;"></i>
+<p class="font-poppins font-medium text-xl italic" style="color: #1A1F3D;">
+                        « J'ai un bon niveau de français à l'oral, mais mes écrits ne reflètent pas mes compétences. »
+                    </p>
+</div>
+<!-- Solution / Promise -->
+<div class="flex items-center p-4 rounded-lg border-l-4" style="background-color: #F8F9FC; border-color: #10B981;">
+<div class="mr-4" style="color: #10B981;">
+<i class="fa-solid fa-lightbulb text-2xl"></i>
+</div>
+<p class="font-poppins font-semibold text-lg" style="color: #1A1F3D;">
+                        C'est exactement ce que l'on va résoudre ensemble aujourd'hui.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

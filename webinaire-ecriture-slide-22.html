@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 17 - Offre Exclusive</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        /* Subtle organic shape - bottom left corner */
+        .blob-corner { 
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            z-index: 0;
+            opacity: 0.35; /* Increased opacity for better visibility of the lavender color */
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="blob-corner pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M41.9,-73.4C55.1,-65.9,67.2,-57.4,77.3,-46.6C87.4,-35.8,95.5,-22.7,94.8,-9.3C94.1,4.1,84.7,17.9,75.2,30.1C65.7,42.3,56.1,52.9,44.9,61.8C33.7,70.7,20.9,77.9,7.6,79.5C-5.7,81.1,-19.5,77.1,-32.1,71.5C-44.7,65.9,-56.1,58.7,-65.6,48.7C-75.1,38.7,-82.7,25.9,-85.4,12.2C-88.1,-1.5,-85.9,-16.1,-78.2,-28.7C-70.5,-41.3,-57.3,-51.9,-44.3,-59.5C-31.3,-67.1,-18.5,-71.7,-5.2,-70.6C8.1,-69.5,28.7,-80.9,41.9,-73.4Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 w-full h-full flex flex-col px-20 py-12">
+<!-- Header Section -->
+<div class="mb-6 w-full text-center">
+<div class="inline-flex items-center mb-3">
+<div class="px-4 py-1 rounded-lg text-white font-poppins font-bold text-sm uppercase tracking-widest shadow-sm" style="background-color: #1A1F3D;">
+                        Offre Spéciale
+                    </div>
+</div>
+<h1 class="font-montserrat font-extrabold text-5xl mb-2" style="color: #1A1F3D;">
+                    Offre exclusive participants webinaire
+                </h1>
+</div>
+<!-- Main Content: Pricing Card -->
+<div class="flex-1 w-full flex items-center justify-center">
+<div class="bg-white rounded-3xl shadow-2xl p-10 max-w-4xl w-full relative group" style="border: 2px solid #E2E8F0;">
+<!-- Top Ribbon Badge -->
+<div class="absolute top-6 -right-12 z-10">
+<div class="text-white text-sm font-bold px-16 py-2 transform rotate-45 shadow-md uppercase tracking-wider" style="background-color: #EF4444;">
+                            -33% Réduction
+                        </div>
+</div>
+<!-- Pricing Content Grid -->
+<div class="grid grid-cols-2 gap-12 items-center">
+<!-- Left Side: Price -->
+<div class="text-center pr-12" style="border-right: 1px solid #F1F5F9;">
+<p class="font-poppins text-xl line-through decoration-2 mb-2 font-medium" style="color: #718096; text-decoration-color: #EF4444;">
+                                Prix normal : 149€
+                            </p>
+<div class="flex items-start justify-center leading-none mb-4" style="color: #1A1F3D;">
+<span class="text-6xl font-montserrat font-bold mt-2">99</span>
+<span class="text-4xl font-montserrat font-bold mt-2">€</span>
+</div>
+<div class="px-4 py-2 rounded-full font-bold text-sm inline-block" style="background-color: #F0FDF4; color: #16A34A; border: 1px solid #BBF7D0;">
+<i class="fa-solid fa-check mr-2"></i>33% d'économie
+                            </div>
+<p class="mt-6 font-poppins text-base" style="color: #5A657A;">
+                                Soit seulement <span class="font-bold" style="color: #1A1F3D;">20€/semaine</span><br/>pour transformer votre écriture
+                            </p>
+</div>
+<!-- Right Side: Urgency & CTA -->
+<div class="flex flex-col justify-center">
+<!-- Urgency Box -->
+<div class="rounded-xl p-5 mb-8 flex items-start" style="background-color: #FFF7ED; border: 1px solid #FFEDD5;">
+<div class="w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #FFEDD5; color: #EA580C;">
+<i class="fa-solid fa-hourglass-half text-xl animate-pulse"></i>
+</div>
+<div>
+<h4 class="font-montserrat font-bold text-lg mb-1" style="color: #9A3412;">Attention</h4>
+<p class="font-poppins text-sm leading-tight" style="color: #9A3412;">
+                                        Offre valable <span class="font-bold underline">UNIQUEMENT</span> pendant 48 heures après ce webinaire.
+                                    </p>
+</div>
+</div>
+<!-- Value Points -->
+<ul class="space-y-3 mb-0">
+<li class="flex items-center">
+<i class="fa-solid fa-circle-check mr-3" style="color: #10B981;"></i>
+<p class="font-poppins font-medium" style="color: #4A5568;">Accès complet aux 5 semaines</p>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-circle-check mr-3" style="color: #10B981;"></i>
+<p class="font-poppins font-medium" style="color: #4A5568;">Corrections personnalisées incluses</p>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-circle-check mr-3" style="color: #10B981;"></i>
+<p class="font-poppins font-medium" style="color: #4A5568;">Disponible pendant 1 an</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Decorative Line -->
+<div class="absolute bottom-0 left-0 w-full h-2" style="background-color: #1A1F3D;"></div>
+</div>
+</div>
+<!-- Footer Text -->
+<div class="mt-8 text-center opacity-80">
+<p class="font-poppins text-sm" style="color: #5A657A;">
+<i class="fa-solid fa-lock mr-2"></i>Paiement sécurisé · Accès immédiat
+                </p>
+</div>
+</div>
+</div>
+</body>
+</html>

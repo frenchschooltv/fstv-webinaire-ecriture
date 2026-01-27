@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 9 - Exercice AVANT</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-courier { font-family: 'Courier Prime', monospace; }
+
+        /* Subtle organic shape - bottom right */
+        .blob-corner {
+            position: absolute;
+            bottom: -120px;
+            right: -80px;
+            width: 450px;
+            height: 450px;
+            z-index: 0;
+            opacity: 0.12;
+            transform: rotate(-10deg);
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="blob-corner pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,70.6,31.2C59,40.9,47.1,47.4,35.7,54.7C24.3,62,13.4,70.1,1.4,67.7C-10.6,65.3,-23.7,52.4,-36.3,41.9C-48.9,31.4,-61,23.3,-68.9,11.8C-76.8,0.3,-80.5,-14.6,-74.6,-26.4C-68.7,-38.2,-53.2,-46.9,-39.7,-54.3C-26.2,-61.7,-14.7,-67.8,0.6,-68.9C15.9,-70,30.5,-66.1,44.7,-76.4Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+</svg>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 w-full h-full flex flex-col px-20 py-16">
+<!-- Header Section -->
+<div class="mb-8 w-full">
+<div class="flex items-center mb-3">
+<div class="px-4 py-1 rounded-lg text-white font-poppins font-bold text-sm uppercase tracking-widest mr-4 shadow-sm" style="background-color: #1A1F3D;">
+                        Exercice Pratique
+                    </div>
+<div class="flex-grow rounded-full" style="height: 2px; background-color: #E2E8F0;"></div>
+</div>
+<h1 class="font-montserrat font-extrabold text-5xl mb-2" style="color: #1A1F3D;">
+                    Transformons ce texte
+                </h1>
+<p class="font-poppins text-xl font-medium" style="color: #5A657A;">
+                    Analyse d'un email de demande d'augmentation
+                </p>
+</div>
+<!-- Main Content Area: Before Version -->
+<div class="flex-1 w-full max-w-4xl mx-auto flex flex-col justify-center">
+<!-- Label Badge -->
+<div class="flex justify-center -mb-5 relative z-20">
+<div class="text-white px-6 py-2 rounded-full shadow-lg flex items-center border-4 border-white" style="background-color: #EF4444;">
+<i class="fa-solid fa-xmark mr-3 text-lg"></i>
+<span class="font-montserrat font-bold tracking-wider text-sm">VERSION INITIALE</span>
+</div>
+</div>
+<!-- Text Container -->
+<div class="rounded-2xl shadow-lg p-10 relative overflow-hidden group" style="background-color: #FEF2F2; border: 2px solid #FECACA;">
+<!-- Paper texture effect overlay (subtle) -->
+<div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: radial-gradient(#FCA5A5 1px, transparent 1px); background-size: 20px 20px;">
+</div>
+<!-- Quote Icon -->
+<div class="absolute top-6 left-6 opacity-50" style="color: #FCA5A5;">
+<i class="fa-solid fa-quote-left text-4xl"></i>
+</div>
+<!-- Email Header Mockup -->
+<div class="pb-4 mb-6 flex items-center opacity-70" style="border-bottom: 1px solid #FCA5A5;">
+<div class="font-poppins text-sm font-semibold mr-4" style="color: #7F1D1D;">Sujet :</div>
+<div class="font-poppins text-sm italic" style="color: #4A5568;">Question salaire</div>
+</div>
+<!-- The Bad Text Content -->
+<div class="pl-8 relative z-10">
+<p class="font-poppins text-2xl leading-relaxed text-left" style="color: #4A5568;">
+                            « Bonjour,<br/>
+                            Je vous écris parce que je veux parler de mon salaire. Je travaille ici depuis 3 ans. J'ai fait beaucoup de projets. Je pense que je mérite une augmentation. Les prix augmentent. La vie coûte cher. J'espère que vous comprenez. Merci. »
+                        </p>
+</div>
+<!-- Analysis Notes (Visual clues of errors) -->
+<div class="absolute bottom-4 right-4 flex space-x-2">
+<div class="backdrop-blur-sm px-3 py-1 rounded-md text-xs font-bold shadow-sm" style="background-color: rgba(255,255,255,0.8); color: #EF4444; border: 1px solid #FECACA;">
+                            Ton inadapté
+                        </div>
+<div class="backdrop-blur-sm px-3 py-1 rounded-md text-xs font-bold shadow-sm" style="background-color: rgba(255,255,255,0.8); color: #EF4444; border: 1px solid #FECACA;">
+                            Phrases hachées
+                        </div>
+<div class="backdrop-blur-sm px-3 py-1 rounded-md text-xs font-bold shadow-sm" style="background-color: rgba(255,255,255,0.8); color: #EF4444; border: 1px solid #FECACA;">
+                            Argumentation faible
+                        </div>
+</div>
+</div>
+<!-- Footer Prompt -->
+<div class="mt-8 text-center">
+<p class="font-poppins text-lg" style="color: #5A657A;">
+<i class="fa-regular fa-comment-dots mr-2" style="color: #B8B5E8;"></i>
+                        Qu'est-ce qui ne va pas selon vous ? <span class="font-bold" style="color: #1A1F3D;">Écrivez dans le chat !</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

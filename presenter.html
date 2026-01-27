@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Webinaire Atelier Ecriture - Presenter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a2e;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 1280px;
+            height: 720px;
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .slide-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 12px 25px;
+            border-radius: 50px;
+            z-index: 1000;
+        }
+
+        .controls button {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .controls button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .controls button:active {
+            transform: scale(0.95);
+        }
+
+        .controls button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .slide-counter {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .fullscreen-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: none;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .help-hint {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            z-index: 1000;
+        }
+
+        .help-hint kbd {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin: 0 2px;
+        }
+
+        /* Fullscreen styles */
+        body:fullscreen,
+        body:-webkit-full-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:fullscreen .slide-container,
+        body:-webkit-full-screen .slide-container {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:fullscreen .slide-container iframe,
+        body:-webkit-full-screen .slide-container iframe {
+            width: 100vw;
+            height: calc(100vw * 9 / 16);
+            max-height: 100vh;
+            max-width: calc(100vh * 16 / 9);
+        }
+
+        body:fullscreen .controls,
+        body:-webkit-full-screen .controls {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        body:fullscreen .controls:hover,
+        body:-webkit-full-screen .controls:hover {
+            opacity: 1;
+        }
+
+        body:fullscreen .fullscreen-btn,
+        body:-webkit-full-screen .fullscreen-btn,
+        body:fullscreen .help-hint,
+        body:-webkit-full-screen .help-hint {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="help-hint">
+        <kbd>←</kbd> <kbd>→</kbd> Navigate &nbsp;|&nbsp; <kbd>F</kbd> Fullscreen &nbsp;|&nbsp; <kbd>Home</kbd> First &nbsp;|&nbsp; <kbd>End</kbd> Last
+    </div>
+
+    <button class="fullscreen-btn" onclick="toggleFullscreen()">
+        ⛶ Fullscreen
+    </button>
+
+    <div class="slide-container">
+        <iframe id="slideFrame" src="webinaire-ecriture-slide-1.html"></iframe>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="prevSlide()">◀</button>
+        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">25</span></span>
+        <button id="nextBtn" onclick="nextSlide()">▶</button>
+    </div>
+
+    <script>
+        const totalSlides = 25;
+        let currentSlide = 1;
+
+        const slideFrame = document.getElementById('slideFrame');
+        const currentSlideEl = document.getElementById('currentSlide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateSlide() {
+            slideFrame.src = `webinaire-ecriture-slide-${currentSlide}.html`;
+            currentSlideEl.textContent = currentSlide;
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === totalSlides;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        function goToSlide(n) {
+            currentSlide = Math.max(1, Math.min(n, totalSlides));
+            updateSlide();
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.body.requestFullscreen().catch(err => {
+                    console.log('Fullscreen error:', err);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowRight':
+                case 'ArrowDown':
+                case ' ':
+                case 'PageDown':
+                    e.preventDefault();
+                    nextSlide();
+                    break;
+                case 'ArrowLeft':
+                case 'ArrowUp':
+                case 'PageUp':
+                    e.preventDefault();
+                    prevSlide();
+                    break;
+                case 'Home':
+                    e.preventDefault();
+                    goToSlide(1);
+                    break;
+                case 'End':
+                    e.preventDefault();
+                    goToSlide(totalSlides);
+                    break;
+                case 'f':
+                case 'F':
+                    e.preventDefault();
+                    toggleFullscreen();
+                    break;
+            }
+        });
+
+        // Click navigation (click left half = prev, right half = next)
+        document.querySelector('.slide-container').addEventListener('click', (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            if (clickX < rect.width / 2) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+        });
+
+        // Initialize
+        updateSlide();
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Exemple Erreur #3 - Plan Mental</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        /* Blob - Bottom Right - Fixed Color #B8B5E8 */
+        .blob-accent {
+            position: absolute;
+            bottom: -150px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            z-index: 0;
+            opacity: 0.35;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1280px; height: 720px; min-height: 720px; background-color: white;" class="relative flex flex-col overflow-hidden">
+    
+    <div class="blob-accent pointer-events-none">
+        <svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42.7,-72.6C56.3,-65.8,69.1,-57.4,78.9,-46.3C88.7,-35.2,95.5,-21.4,94.2,-8.1C92.9,5.2,83.5,18,74.1,29.9C64.8,41.8,55.5,52.8,44.7,61.4C33.8,70,21.4,76.2,8.4,78C-4.6,79.9,-18.3,77.3,-30.9,72C-43.5,66.6,-55.1,58.5,-64.8,48.2C-74.5,37.9,-82.3,25.4,-84.6,12.1C-86.8,-1.2,-83.5,-15.3,-75.8,-27.1C-68,-38.9,-55.8,-48.3,-43.6,-55.6C-31.4,-62.9,-19.2,-68,-6.4,-66.9C6.4,-65.8,12.8,-58.5,19.2,-51.2Z" fill="#B8B5E8" transform="translate(100 100)"></path>
+        </svg>
+    </div>
+
+    <div class="relative z-10 w-full h-full flex flex-col px-20 py-16">
+        
+        <div class="mb-8 w-full">
+            <div class="flex items-center mb-3">
+                <div class="px-4 py-1 rounded-lg text-white font-poppins font-bold text-sm uppercase tracking-widest mr-4 shadow-sm" style="background-color: #1A1F3D;">
+                    Mise en pratique
+                </div>
+                <div class="flex-grow rounded-full" style="height: 2px; background-color: #E2E8F0;"></div>
+            </div>
+            <h1 class="font-montserrat font-extrabold text-4xl mb-2" style="color: #1A1F3D;">
+                Exemple concret : <span style="color: #5A657A;">Email professionnel</span>
+            </h1>
+            <p class="font-poppins text-lg italic text-gray-500">Sujet : Demander un congé à mon manager</p>
+        </div>
+
+        <div class="flex-1 flex flex-col justify-center mb-6">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border relative overflow-hidden" style="border-color: #E2E8F0;">
+                <div class="absolute top-0 left-0 w-full h-2" style="background-color: #1A1F3D;"></div>
+                
+                <h3 class="font-montserrat font-bold text-xl mb-6 text-center" style="color: #1A1F3D;">
+                    <i class="fa-solid fa-brain mr-2" style="color: #B8B5E8;"></i> Plan mental (30s avant d'écrire)
+                </h3>
+
+                <div class="flex items-start justify-between space-x-4">
+                    
+                    <div class="flex-1 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-sm" style="background-color: #F4F4F9; color: #1A1F3D; border: 2px solid #B8B5E8;">1</div>
+                        <h4 class="font-montserrat font-bold text-lg mb-2" style="color: #1A1F3D;">QUOI</h4>
+                        <p class="font-poppins text-sm p-3 rounded-lg w-full" style="background-color: #F8F9FC; color: #5A657A;">Je demande un congé du 10 au 15 mars</p>
+                    </div>
+
+                    <div class="pt-4 opacity-30">
+                        <i class="fa-solid fa-arrow-right text-2xl" style="color: #1A1F3D;"></i>
+                    </div>
+
+                    <div class="flex-1 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-sm text-white" style="background-color: #1A1F3D; border: 2px solid #1A1F3D;">2</div>
+                        <h4 class="font-montserrat font-bold text-lg mb-2" style="color: #1A1F3D;">POURQUOI</h4>
+                        <p class="font-poppins text-sm p-3 rounded-lg w-full" style="background-color: #F8F9FC; color: #5A657A;">Raisons perso + période calme + passation assurée</p>
+                    </div>
+
+                    <div class="pt-4 opacity-30">
+                        <i class="fa-solid fa-arrow-right text-2xl" style="color: #1A1F3D;"></i>
+                    </div>
+
+                    <div class="flex-1 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-sm" style="background-color: #E6FFFA; color: #10B981; border: 2px solid #10B981;">3</div>
+                        <h4 class="font-montserrat font-bold text-lg mb-2" style="color: #10B981;">ET ALORS</h4>
+                        <p class="font-poppins text-sm p-3 rounded-lg w-full" style="background-color: #F8F9FC; color: #5A657A;">En attente de votre validation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-l-4 rounded-r-xl p-6 flex items-center shadow-sm" style="background-color: #F8F9FC; border-color: #FBBF24;">
+            <div class="mr-6 flex-shrink-0">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #FFFBEB;">
+                    <i class="fa-solid fa-stopwatch text-2xl" style="color: #FBBF24;"></i>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-1" style="color: #1A1F3D;">Astuce actionnable</h4>
+                <p class="font-poppins text-base leading-relaxed" style="color: #4A5568;">
+                    Avant d'écrire, <span class="font-bold" style="color: #1A1F3D;">prenez 2 minutes pour faire un plan en 3 points.</span><br>
+                    <span class="text-sm">Ça vous fera gagner 15 minutes de rédaction + votre texte sera 10x plus clair.</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
