@@ -24,6 +24,20 @@
             opacity: 0.35;
             transform: rotate(45deg);
         }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.5s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -37,7 +51,7 @@
 <!-- Content Container -->
 <div class="relative z-10 w-full h-full flex px-20 py-16">
 <!-- Left Column: Image & Stats (35%) -->
-<div class="flex flex-col items-center justify-center" style="width: 35%;">
+<div class="reveal-card delay-1 flex flex-col items-center justify-center" style="width: 35%;">
 <!-- Profile Image -->
 <div class="w-64 h-64 rounded-2xl shadow-lg mb-8 relative overflow-hidden">
 <img src="bio-vincent.png" alt="Vincent Bouen" class="w-full h-full object-cover" style="object-position: 60% center;"/>
@@ -55,12 +69,12 @@
 <i class="fa-brands fa-instagram text-2xl"></i>
 <i class="fa-brands fa-tiktok text-2xl"></i>
 </div>
-<p class="font-montserrat font-extrabold text-3xl mb-1" style="color: #1A1F3D;">3.5 M+</p>
+<p id="counter" class="font-montserrat font-extrabold text-3xl mb-1" style="color: #1A1F3D;">0</p>
 <p class="font-poppins text-sm" style="color: #718096;">personnes me suivent</p>
 </div>
 </div>
 <!-- Right Column: Text Content (65%) -->
-<div class="flex flex-col justify-center pl-16 pr-4" style="width: 65%;">
+<div class="reveal-card delay-2 flex flex-col justify-center pl-16 pr-4" style="width: 65%;">
 <!-- Header -->
 <div class="mb-8">
 <div class="flex items-center mb-2">
@@ -99,5 +113,26 @@
 </div>
 </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const counter = document.getElementById('counter');
+        const target = 3.5;
+        const duration = 2000;
+        const steps = 60;
+        const increment = target / steps;
+        let current = 0;
+        const interval = duration / steps;
+
+        const timer = setInterval(function() {
+            current += increment;
+            if (current >= target) {
+                counter.textContent = '3.5 M+';
+                clearInterval(timer);
+            } else {
+                counter.textContent = current.toFixed(1) + ' M+';
+            }
+        }, interval);
+    });
+</script>
 </body>
 </html>

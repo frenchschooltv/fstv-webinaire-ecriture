@@ -24,6 +24,21 @@
             opacity: 0.35;
             transform: rotate(-15deg);
         }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.5s; }
+        .delay-3 { animation-delay: 0.8s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -54,7 +69,7 @@
 <!-- Comparison Section (Dominant Part) -->
 <div class="flex-1 flex flex-col justify-center space-y-6 w-full max-w-5xl mx-auto">
 <!-- BAD Example (Red) -->
-<div class="flex relative bg-white border-l-8 rounded-r-xl shadow-md transform transition-transform hover:scale-[1.01] duration-300" style="border-color: #EF4444;">
+<div class="reveal-card delay-1 flex relative bg-white border-l-8 rounded-r-xl shadow-md transform transition-transform hover:scale-[1.01] duration-300" style="border-color: #EF4444;">
 <!-- Icon Box -->
 <div class="w-32 flex flex-col items-center justify-center flex-shrink-0" style="background-color: #FEF2F2; border-right: 1px solid #FEE2E2;">
 <div class="w-12 h-12 rounded-full flex items-center justify-center mb-2" style="background-color: #FEE2E2;">
@@ -74,7 +89,7 @@
 <i class="fa-solid fa-arrow-down text-xl" style="color: #5A657A;"></i>
 </div>
 <!-- GOOD Example (Green) -->
-<div class="flex relative bg-white border-l-8 rounded-r-xl shadow-md transform transition-transform hover:scale-[1.01] duration-300 mt-2" style="border-color: #10B981;">
+<div class="reveal-card delay-2 flex relative bg-white border-l-8 rounded-r-xl shadow-md transform transition-transform hover:scale-[1.01] duration-300 mt-2" style="border-color: #10B981;">
 <!-- Icon Box -->
 <div class="w-32 flex flex-col items-center justify-center flex-shrink-0" style="background-color: #ECFDF5; border-right: 1px solid #D1FAE5;">
 <div class="w-12 h-12 rounded-full flex items-center justify-center mb-2" style="background-color: #D1FAE5;">

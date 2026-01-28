@@ -34,6 +34,30 @@
             z-index: 0;
             opacity: 0.35; /* Increased opacity to 0.35 as requested */
         }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .reveal-item {
+            animation: slideIn 0.7s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -66,7 +90,7 @@
 <!-- Content Container -->
 <div class="space-y-6 text-center max-w-5xl w-full flex flex-col items-center">
 <!-- Bonus Item -->
-<div class="backdrop-blur-sm p-5 rounded-xl border border-transparent transition-colors duration-300 w-full max-w-3xl" style="background-color: rgba(255, 255, 255, 0.5);">
+<div class="reveal-item delay-1 backdrop-blur-sm p-5 rounded-xl border border-transparent transition-colors duration-300 w-full max-w-3xl" style="background-color: rgba(255, 255, 255, 0.5);">
 <p class="font-poppins text-2xl font-medium leading-relaxed flex items-center justify-center" style="color: #4A5568;">
 <span class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shrink-0" style="background-color: rgba(226, 232, 240, 0.3);">
 <i class="fa-solid fa-file-pdf text-xl" style="color: #B8B5E8;"></i>
@@ -77,7 +101,7 @@
 </p>
 </div>
 <!-- Offer Item -->
-<div class="backdrop-blur-sm p-5 rounded-xl border border-transparent transition-colors duration-300 w-full max-w-3xl" style="background-color: rgba(255, 255, 255, 0.5);">
+<div class="reveal-item delay-2 backdrop-blur-sm p-5 rounded-xl border border-transparent transition-colors duration-300 w-full max-w-3xl" style="background-color: rgba(255, 255, 255, 0.5);">
 <p class="font-poppins text-2xl font-medium leading-relaxed flex items-center justify-center" style="color: #4A5568;">
 <span class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shrink-0" style="background-color: rgba(226, 232, 240, 0.3);">
 <i class="fa-solid fa-clock text-xl" style="color: #B8B5E8;"></i>
@@ -88,7 +112,7 @@
 </p>
 </div>
 <!-- Link Action -->
-<div class="pt-6">
+<div class="reveal-item delay-3 pt-6">
 <div class="font-poppins px-8 py-3 rounded-full flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow" style="color: #1A1F3D; background-color: #F4F4F9; border: 1px solid rgba(184, 181, 232, 0.3);">
 <i class="fa-solid fa-arrow-right" style="color: #B8B5E8;"></i>
 <span class="font-semibold text-lg tracking-wide">https://frenchschooltv.com/products/atelier-ecriture</span>

@@ -25,6 +25,20 @@
             opacity: 0.12;
             transform: rotate(-10deg);
         }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.5s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -53,7 +67,7 @@
                 </p>
 </div>
 <!-- Main Content Area: Before Version -->
-<div class="flex-1 w-full max-w-4xl mx-auto flex flex-col justify-center">
+<div class="reveal-card delay-1 flex-1 w-full max-w-4xl mx-auto flex flex-col justify-center">
 <!-- Label Badge -->
 <div class="flex justify-center -mb-5 relative z-20">
 <div class="text-white px-6 py-2 rounded-full shadow-lg flex items-center border-4 border-white" style="background-color: #EF4444;">
@@ -96,7 +110,7 @@
 </div>
 </div>
 <!-- Footer Prompt -->
-<div class="mt-8 text-center">
+<div class="reveal-card delay-2 mt-8 text-center">
 <p class="font-poppins text-lg" style="color: #5A657A;">
 <i class="fa-regular fa-comment-dots mr-2" style="color: #B8B5E8;"></i>
                         Qu'est-ce qui ne va pas selon vous ? <span class="font-bold" style="color: #1A1F3D;">Écrivez dans le chat !</span>

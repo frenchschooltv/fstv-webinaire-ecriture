@@ -22,6 +22,21 @@
             z-index: 0;
             opacity: 0.12;
         }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.5s; }
+        .delay-3 { animation-delay: 0.8s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -33,7 +48,7 @@
         </svg>
     </div>
 
-    <div class="relative z-10 w-full h-full flex flex-col px-20 py-16">
+    <div class="relative z-10 w-full h-full flex flex-col px-20 py-10">
         
         <div class="mb-8 w-full">
             <div class="flex items-center mb-3">
@@ -47,9 +62,9 @@
             </h1>
         </div>
 
-        <div class="flex-1 grid grid-cols-2 gap-8 mb-6">
-            
-            <div class="rounded-2xl shadow-lg relative overflow-hidden flex flex-col h-full" style="background-color: #FEF2F2; border: 2px solid #FECACA;">
+        <div class="flex-1 grid grid-cols-2 gap-8 mb-4">
+
+            <div class="reveal-card delay-1 rounded-2xl shadow-lg relative overflow-hidden flex flex-col h-full" style="background-color: #FEF2F2; border: 2px solid #FECACA;">
                 
                 <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: radial-gradient(#FCA5A5 1px, transparent 1px); background-size: 20px 20px;"></div>
                 
@@ -75,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="rounded-2xl shadow-lg relative overflow-hidden flex flex-col h-full" style="background-color: #ECFDF5; border: 2px solid #A7F3D0;">
+            <div class="reveal-card delay-2 rounded-2xl shadow-lg relative overflow-hidden flex flex-col h-full" style="background-color: #ECFDF5; border: 2px solid #A7F3D0;">
                 
                 <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: radial-gradient(#6EE7B7 1px, transparent 1px); background-size: 20px 20px;"></div>
                 

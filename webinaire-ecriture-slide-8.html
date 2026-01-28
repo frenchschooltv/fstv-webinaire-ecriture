@@ -24,6 +24,21 @@
             opacity: 0.12;
             transform: rotate(180deg);
         }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.45s; }
+        .delay-3 { animation-delay: 0.7s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -65,7 +80,7 @@
 <!-- 3 Pillars Steps -->
 <div class="grid grid-cols-3 gap-8 h-full pb-6">
 <!-- Step 1: QUOI -->
-<div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden" style="border: 1px solid #E2E8F0;">
+<div class="reveal-card delay-1 bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden" style="border: 1px solid #E2E8F0;">
 <div class="absolute top-0 left-0 w-full h-2" style="background-color: #B8B5E8;"></div>
 <!-- Number Badge -->
 <div class="w-16 h-16 rounded-full font-montserrat font-extrabold text-3xl flex items-center justify-center mb-6 shadow-sm" style="background-color: #F4F4F9; color: #1A1F3D;">
@@ -82,7 +97,7 @@
 </div>
 </div>
 <!-- Step 2: POURQUOI -->
-<div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden" style="border: 1px solid #E2E8F0;">
+<div class="reveal-card delay-2 bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden" style="border: 1px solid #E2E8F0;">
 <div class="absolute top-0 left-0 w-full h-2" style="background-color: #B8B5E8;"></div>
 <!-- Number Badge -->
 <div class="w-16 h-16 rounded-full font-montserrat font-extrabold text-3xl flex items-center justify-center mb-6 shadow-sm" style="background-color: #F4F4F9; color: #1A1F3D;">
@@ -99,7 +114,7 @@
 </div>
 </div>
 <!-- Step 3: ET ALORS -->
-<div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden" style="border: 1px solid #E2E8F0;">
+<div class="reveal-card delay-3 bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden" style="border: 1px solid #E2E8F0;">
 <div class="absolute top-0 left-0 w-full h-2" style="background-color: #B8B5E8;"></div>
 <!-- Number Badge -->
 <div class="w-16 h-16 rounded-full font-montserrat font-extrabold text-3xl flex items-center justify-center mb-6 shadow-sm" style="background-color: #F4F4F9; color: #1A1F3D;">

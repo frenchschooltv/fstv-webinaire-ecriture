@@ -15,6 +15,21 @@
         /* Custom positioning for visual balance */
         .blob-1 { top: -150px; left: -150px; width: 700px; height: 700px; }
         .blob-2 { bottom: -200px; right: -50px; width: 600px; height: 600px; }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.5s; }
+        .delay-3 { animation-delay: 0.8s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -33,7 +48,7 @@
 </svg>
 </div>
 <!-- Content Area (Dominant Right Side) -->
-<div class="relative z-10 h-full flex flex-col justify-between px-16 pr-24 py-20" style="width: 60%;">
+<div class="reveal-card delay-1 relative z-10 h-full flex flex-col justify-between px-16 pr-24 py-20" style="width: 60%;">
 <!-- TOP: Category Tag -->
 <div>
 <p class="font-poppins font-bold text-lg uppercase" style="color: #B8B5E8; letter-spacing: 0.25em;">

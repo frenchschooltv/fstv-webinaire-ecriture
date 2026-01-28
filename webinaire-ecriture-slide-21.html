@@ -24,6 +24,21 @@
             opacity: 0.35; /* Increased opacity as requested */
             transform: rotate(-15deg);
         }
+
+        /* Staggered Pop Animation */
+        .reveal-card {
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -55,7 +70,7 @@
 <div class="flex-1 w-full max-w-6xl mx-auto flex flex-col justify-center">
 <div class="grid grid-cols-3 gap-8 h-full pb-4">
 <!-- Card 1: Lourdes -->
-<div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300" style="border: 1px solid #E2E8F0;">
+<div class="reveal-card delay-1 bg-white rounded-2xl shadow-lg p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300" style="border: 1px solid #E2E8F0;">
 <!-- Quote Icon -->
 <div class="absolute -top-5 left-8 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md" style="background-color: #B8B5E8;">
 <i class="fa-solid fa-quote-left"></i>
@@ -78,7 +93,7 @@
 </div>
 </div>
 <!-- Card 2: Janice -->
-<div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300 z-10" style="border: 1px solid #B8B5E8;">
+<div class="reveal-card delay-2 bg-white rounded-2xl shadow-xl p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300 z-10" style="border: 1px solid #B8B5E8;">
 <!-- Quote Icon -->
 <div class="absolute -top-5 left-8 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md" style="background-color: #1A1F3D;">
 <i class="fa-solid fa-quote-left"></i>
@@ -101,7 +116,7 @@
 </div>
 </div>
 <!-- Card 3: Erlend -->
-<div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300" style="border: 1px solid #E2E8F0;">
+<div class="reveal-card delay-3 bg-white rounded-2xl shadow-lg p-8 flex flex-col relative group hover:-translate-y-2 transition-transform duration-300" style="border: 1px solid #E2E8F0;">
 <!-- Quote Icon -->
 <div class="absolute -top-5 left-8 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md" style="background-color: #B8B5E8;">
 <i class="fa-solid fa-quote-left"></i>
